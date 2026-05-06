@@ -50,3 +50,59 @@
         cursor: pointer;
     }
 }
+
+.tabFilter {
+    display: none;
+    background-color: #D9D9D9;
+    padding: 10px;
+}
+
+details {
+    margin-bottom: 15px;
+
+    summary {
+        background-color: #A19797;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 22px;
+    }
+
+    .filterCatCon {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 15px;
+        padding-left: 15px;
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+    .mobFilter {
+        display: none;
+    }
+
+    .tabFilter {
+        display: block;
+    }
+
+    .productCon {
+        gap: 10px;
+        padding: 0px;
+    }
+
+    .productCard {
+        width: 278px;
+
+        .productImg {
+            width: 278px;
+            height: 406px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .productCon {
+        padding-left: 25px;
+    }
+}
