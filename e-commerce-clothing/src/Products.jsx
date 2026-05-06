@@ -6,6 +6,77 @@ import filter from './assets/filter-icon.svg'
 
 
 
+function Filter() {
+    return (
+        <>
+            <details>
+                <summary>Category</summary>
+
+                <label>
+                    <input type="checkbox" name="category" value="tshirts" /> T-Shirts
+                </label>
+                
+                <label>
+                    <input type="checkbox" name="category" value="blouse" /> Blouse
+                </label>
+                
+                <label>
+                    <input type="checkbox" name="category" value="tanktop" /> Tank Top
+                </label>
+                
+                <label>
+                    <input type="checkbox" name="category" value="trousers" /> Trousers
+                </label>
+                
+                <label>
+                    <input type="checkbox" name="category" value="slacks" /> Slacks
+                </label>
+
+                <label>
+                    <input type="checkbox" name="category" value="jeans" /> Jeans
+                </label>
+
+                <label>
+                    <input type="checkbox" name="category" value="cardigan" /> Cardigan
+                </label>
+            </details>
+
+            <details>
+                <summary>Price</summary>
+
+                <label>
+                    <input type="checkbox" name="maxPrice" value="25" /> &lt; 25
+                </label>
+                
+                <label>
+                    <input type="checkbox" name="maxPrice" value="50" /> &lt; 50
+                </label>
+                
+                <label>
+                    <input type="checkbox" name="maxPrice" value="75" /> &lt; 75
+                </label>
+            </details>
+
+            <details>
+                <summary>Colour</summary>
+
+                <label>
+                    <input type="checkbox" name="colour" value="red" /> Red
+                </label>
+                
+                <label>
+                    <input type="checkbox" name="colour" value="navy" /> Navy
+                </label>
+                
+                <label>
+                    <input type="checkbox" name="colour" value="beige" /> Beige
+                </label>
+            </details>
+        </>
+        
+    )
+}
+
 
 
 export default function Products() {
@@ -13,11 +84,15 @@ export default function Products() {
         <main>
             <section className='grid-con'>
 
-                <div className='col-span-full'>
+                <div className='mobFilter col-span-full'>
                     <img className='filterIcon' src={filter} alt="Filter Icon" />
                 </div>
 
-                <section className='productCon col-span-full'>
+                <div className='tabFilter md:col-span-2 lg:col-span-3'>
+                    <Filter/>
+                </div>
+
+                <section className='productCon col-span-full md:col-span-6 lg:col-span-9'>
 
                     <div className='productCard'>
                         <div className='productImg'></div>
