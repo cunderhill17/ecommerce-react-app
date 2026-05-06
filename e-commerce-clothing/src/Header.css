@@ -17,6 +17,29 @@ header.grid-con {
     align-items: center;
 }
 
+.navLinks {
+    display: none;
+    align-items: center;
+
+    ul {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+        list-style-type: none;
+
+        li {
+            a {
+                text-decoration: none;
+                color: #4B4B4B;
+                 
+                &:hover {
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}
+
 .searchBar {
     width: 240px;
     padding: 10px;
@@ -43,5 +66,15 @@ header.grid-con {
         border-right: 1px solid #FFFFFF;
     }
 
+}
+
+@media screen and (min-width: 768px) {
+    .hamburgerMenu {
+        display: none;
+    }
+
+    .navLinks {
+        display: flex;
+    }
 }
 
