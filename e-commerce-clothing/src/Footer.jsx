@@ -19,7 +19,7 @@ export default function Footer() {
                 </div>
             </section>
 
-            <section className='col-span-2'>
+            <section className='footerQuickLinks col-span-2'>
                 <h2>Quick Links</h2>
                 <ul>
                     <li><a href="#">Products</a></li>
@@ -28,7 +28,7 @@ export default function Footer() {
                 </ul>
             </section>
 
-            <section className="col-span-2">
+            <section className="footerSocialMedia col-span-2">
                 <h2>Stay In Touch</h2>
                 <ul>
                     <li><a href="#">Facebook</a></li>
