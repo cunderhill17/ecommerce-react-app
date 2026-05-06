@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 import './global/grid.css'
 import './Header.css'
 import cart from './assets/cart-icon.svg'
@@ -14,11 +16,17 @@ export default function Header() {
                     <img className='menuIcon' src={menuIcon} alt="Hamburger Menu Icon" />
                 </div>
 
-                <nav className='md:col-span-3 lg:col-span-5'>
+                <nav className='navLinks md:col-span-3 lg:col-span-5'>
                     <ul>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">About</a></li>
+                        <li>
+                            <NavLink to="/products">Products</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/contact">Contact</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/">About</NavLink>
+                        </li>
                     </ul>
                 </nav>
 
