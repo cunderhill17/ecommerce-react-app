@@ -14,6 +14,14 @@ export default function Header() {
                     <img className='menuIcon' src={menuIcon} alt="Hamburger Menu Icon" />
                 </div>
 
+                <nav className='md:col-span-3 lg:col-span-5'>
+                    <ul>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </nav>
+
                 <div className='searchBar col-span-3 md:col-start-6 md:col-end-9 lg:col-start-10 lg:col-end-13'>
                     <img className='searchIcon' src={search} alt="Search Icon" />
                     <input type="search" name="productSearch" id="productSearch" placeholder='Search...' />
