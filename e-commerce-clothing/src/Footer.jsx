@@ -5,7 +5,7 @@ export default function Footer() {
     return (
         <footer className='grid-con'>
 
-            <section className='col-span-full'>
+            <section className='col-span-full md:col-span-4'>
                 <h2 className="footerLogo">Name of Clothing Brand</h2>
                 
                 <div className='footerAddress'>
@@ -19,15 +19,33 @@ export default function Footer() {
                 </div>
             </section>
 
-            <div className='copyright col-span-full'>
+            <section className='col-span-2'>
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </section>
+
+            <section className="col-span-2">
+                <h2>Stay In Touch</h2>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </section>
+
+            <div className='copyright col-span-full md:col-span-5'>
                 <p>&copy; 2026 Your Brand Name. All rights reserved. Designed with purpose.</p>
             </div>
 
-            <div className='footerPrivacy col-start-2 col-end-3'>
+            <div className='footerPrivacy col-start-2 col-end-3 md:col-start-7 md:col-end-8 lg:col-start-11 lg:col-end-12'>
                 <p>Privacy</p>
             </div>
 
-            <div className='footerTerms col-start-3 col-end-4'>
+            <div className='footerTerms col-start-3 col-end-4 md:col-start-8 md:col-end-9 lg:col-start-12 lg:col-end-13'>
                 <p>Terms</p>
             </div>
         </footer>
