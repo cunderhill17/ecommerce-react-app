@@ -1,0 +1,52 @@
+.filterIcon {
+    width: 38px;
+}
+
+.productCon {
+    display: flex;
+    padding: 0px 20px;
+    flex-wrap: wrap;
+    gap: 48px;
+}
+
+.productCard {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 162px;
+    margin-bottom: 20px;
+
+    .productImg {
+        width: 162px;
+        height: 201px;
+        background-color: #D9D9D9;
+        border-radius: 10px;
+    }
+
+    .productDetails {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .productColours {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+
+        .colour {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #828181;
+        }
+    }
+
+    .addCartBtn {
+        width: 142px;
+        height: 35px;
+        background-color: #D9D9D9;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}

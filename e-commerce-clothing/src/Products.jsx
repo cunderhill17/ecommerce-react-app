@@ -1,4 +1,5 @@
 import './global/grid.css'
+import './Products.css'
 import filter from './assets/filter-icon.svg'
 
 
@@ -13,23 +14,65 @@ export default function Products() {
             <section className='grid-con'>
 
                 <div className='col-span-full'>
-                    <img src={filter} alt="Filter Icon" />
+                    <img className='filterIcon' src={filter} alt="Filter Icon" />
                 </div>
 
                 <section className='productCon col-span-full'>
 
                     <div className='productCard'>
-                        <div>Image</div>
-                        <div>
+                        <div className='productImg'></div>
+                        <div className='productDetails'>
                             <p>Product Name</p>
                             <p>Price</p>
                         </div>
-                        <div className='ProductColours'>
-                            <div>Colors</div>
-                            <div>Colors</div>
-                            <div>Colors</div>
+                        <div className='productColours'>
+                            <div className='colour'></div>
+                            <div className='colour'></div>
+                            <div className='colour'></div>
                         </div>
-                        <button>Add To Cart</button>
+                        <button className='addCartBtn'>Add To Cart</button>
+                    </div>
+
+                    <div className='productCard'>
+                        <div className='productImg'></div>
+                        <div className='productDetails'>
+                            <p>Product Name</p>
+                            <p>Price</p>
+                        </div>
+                        <div className='productColours'>
+                            <div className='colour'></div>
+                            <div className='colour'></div>
+                            <div className='colour'></div>
+                        </div>
+                        <button className='addCartBtn'>Add To Cart</button>
+                    </div>
+
+                    <div className='productCard'>
+                        <div className='productImg'></div>
+                        <div className='productDetails'>
+                            <p>Product Name</p>
+                            <p>Price</p>
+                        </div>
+                        <div className='productColours'>
+                            <div className='colour'></div>
+                            <div className='colour'></div>
+                            <div className='colour'></div>
+                        </div>
+                        <button className='addCartBtn'>Add To Cart</button>
+                    </div>
+
+                    <div className='productCard'>
+                        <div className='productImg'></div>
+                        <div className='productDetails'>
+                            <p>Product Name</p>
+                            <p>Price</p>
+                        </div>
+                        <div className='productColours'>
+                            <div className='colour'></div>
+                            <div className='colour'></div>
+                            <div className='colour'></div>
+                        </div>
+                        <button className='addCartBtn'>Add To Cart</button>
                     </div>
                     
                 </section>
