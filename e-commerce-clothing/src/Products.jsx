@@ -1,5 +1,6 @@
 import './global/grid.css'
 import './Products.css'
+import products from './data/products.json'
 import filter from './assets/filter-icon.svg'
 
 
@@ -85,6 +86,31 @@ function Filter() {
 }
 
 
+function ProductCard() {
+
+    return (
+        <>
+            {
+                products.map(p => (
+                    <div key={p.id} className='productCard'>
+                        <div className='productImg'></div>
+                        <div className='productDetails'>
+                            <p>{p.name}</p>
+                            <p>{p.price}</p>
+                        </div>
+                        <div className='productColours'>
+                            {p.colours.map((colour, i) => (
+                                <div key={i} className='colour' style={{ backgroundColor: colour}}></div>
+                            ))}
+                        </div>
+                        <button className='addCartBtn'>Add To Cart</button>
+                    </div>
+                ))
+            }
+        </>
+    )
+}
+
 
 export default function Products() {
     return (
@@ -100,63 +126,7 @@ export default function Products() {
                 </div>
 
                 <section className='productCon col-span-full md:col-span-6 lg:col-span-9'>
-
-                    <div className='productCard'>
-                        <div className='productImg'></div>
-                        <div className='productDetails'>
-                            <p>Product Name</p>
-                            <p>Price</p>
-                        </div>
-                        <div className='productColours'>
-                            <div className='colour'></div>
-                            <div className='colour'></div>
-                            <div className='colour'></div>
-                        </div>
-                        <button className='addCartBtn'>Add To Cart</button>
-                    </div>
-
-                    <div className='productCard'>
-                        <div className='productImg'></div>
-                        <div className='productDetails'>
-                            <p>Product Name</p>
-                            <p>Price</p>
-                        </div>
-                        <div className='productColours'>
-                            <div className='colour'></div>
-                            <div className='colour'></div>
-                            <div className='colour'></div>
-                        </div>
-                        <button className='addCartBtn'>Add To Cart</button>
-                    </div>
-
-                    <div className='productCard'>
-                        <div className='productImg'></div>
-                        <div className='productDetails'>
-                            <p>Product Name</p>
-                            <p>Price</p>
-                        </div>
-                        <div className='productColours'>
-                            <div className='colour'></div>
-                            <div className='colour'></div>
-                            <div className='colour'></div>
-                        </div>
-                        <button className='addCartBtn'>Add To Cart</button>
-                    </div>
-
-                    <div className='productCard'>
-                        <div className='productImg'></div>
-                        <div className='productDetails'>
-                            <p>Product Name</p>
-                            <p>Price</p>
-                        </div>
-                        <div className='productColours'>
-                            <div className='colour'></div>
-                            <div className='colour'></div>
-                            <div className='colour'></div>
-                        </div>
-                        <button className='addCartBtn'>Add To Cart</button>
-                    </div>
-                    
+                    <ProductCard />
                 </section>
 
             </section>
