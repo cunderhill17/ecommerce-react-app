@@ -1,0 +1,47 @@
+header.grid-con {
+    margin-bottom: 25px;
+}
+
+.menuIcon {
+    width: 45px;
+}
+
+.navMenu {
+    background-color: #D9D9D9;
+    padding: 35px 15px 35px 25px;
+}
+
+.hamburgerMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBar {
+    width: 240px;
+    padding: 10px;
+    background-color: #898989;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .searchIcon {
+        width: 25px;
+    }
+
+    .cartIcon {
+        width: 25px;
+    }
+
+    input {
+        width: 145px;
+        height: 25px;
+        border: none;
+        background-color: transparent;
+        color: #ffffff;
+        border-right: 1px solid #FFFFFF;
+    }
+
+}
+
