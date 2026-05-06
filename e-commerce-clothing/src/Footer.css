@@ -1,0 +1,17 @@
+footer.grid-con {
+    margin-top: 25px;
+}
+
+.footerLogo, .footerAddress p, .footerNumber, .copyright, .footerPrivacy p, .footerTerms p {
+    text-align: center;
+}
+
+.footerLogo, .footerAddress, .footerNumber, .copyright {
+    margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px) {
+    .footerLogo, .footerAddress p, .footerNumber, .copyright {
+        text-align: left;
+    }
+}
