@@ -12,65 +12,72 @@ function Filter() {
             <details>
                 <summary>Category</summary>
 
-                <label>
-                    <input type="checkbox" name="category" value="tshirts" /> T-Shirts
-                </label>
-                
-                <label>
-                    <input type="checkbox" name="category" value="blouse" /> Blouse
-                </label>
-                
-                <label>
-                    <input type="checkbox" name="category" value="tanktop" /> Tank Top
-                </label>
-                
-                <label>
-                    <input type="checkbox" name="category" value="trousers" /> Trousers
-                </label>
-                
-                <label>
-                    <input type="checkbox" name="category" value="slacks" /> Slacks
-                </label>
+                <div className="filterCatCon">
+                    <label>
+                        <input type="checkbox" name="category" value="tshirts" /> T-Shirts
+                    </label>
+                    
+                    <label>
+                        <input type="checkbox" name="category" value="blouse" /> Blouse
+                    </label>
+                    
+                    <label>
+                        <input type="checkbox" name="category" value="tanktop" /> Tank Top
+                    </label>
+                    
+                    <label>
+                        <input type="checkbox" name="category" value="trousers" /> Trousers
+                    </label>
+                    
+                    <label>
+                        <input type="checkbox" name="category" value="slacks" /> Slacks
+                    </label>
 
-                <label>
-                    <input type="checkbox" name="category" value="jeans" /> Jeans
-                </label>
+                    <label>
+                        <input type="checkbox" name="category" value="jeans" /> Jeans
+                    </label>
 
-                <label>
-                    <input type="checkbox" name="category" value="cardigan" /> Cardigan
-                </label>
+                    <label>
+                        <input type="checkbox" name="category" value="cardigan" /> Cardigan
+                    </label>
+                </div>
             </details>
 
             <details>
                 <summary>Price</summary>
 
-                <label>
-                    <input type="checkbox" name="maxPrice" value="25" /> &lt; 25
-                </label>
-                
-                <label>
-                    <input type="checkbox" name="maxPrice" value="50" /> &lt; 50
-                </label>
-                
-                <label>
-                    <input type="checkbox" name="maxPrice" value="75" /> &lt; 75
-                </label>
+                <div className="filterCatCon">
+                    <label>
+                        <input type="checkbox" name="maxPrice" value="25" /> &lt; 25
+                    </label>
+                    
+                    <label>
+                        <input type="checkbox" name="maxPrice" value="50" /> &lt; 50
+                    </label>
+                    
+                    <label>
+                        <input type="checkbox" name="maxPrice" value="75" /> &lt; 75
+                    </label>
+                </div>
             </details>
 
             <details>
                 <summary>Colour</summary>
 
-                <label>
-                    <input type="checkbox" name="colour" value="red" /> Red
-                </label>
+                <div className='filterCatCon'>
+                    <label>
+                        <input type="checkbox" name="colour" value="red" /> Red
+                    </label>
+                    
+                    <label>
+                        <input type="checkbox" name="colour" value="navy" /> Navy
+                    </label>
+                    
+                    <label>
+                        <input type="checkbox" name="colour" value="beige" /> Beige
+                    </label>
+                </div>
                 
-                <label>
-                    <input type="checkbox" name="colour" value="navy" /> Navy
-                </label>
-                
-                <label>
-                    <input type="checkbox" name="colour" value="beige" /> Beige
-                </label>
             </details>
         </>
         
