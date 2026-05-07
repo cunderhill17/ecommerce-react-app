@@ -1,6 +1,6 @@
 import './global/grid.css'
 import './Products.css'
-import products from './data/products.json'
+import productsData from './data/products.json'
 import filter from './assets/filter-icon.svg'
 
 
@@ -86,28 +86,33 @@ function Filter() {
 }
 
 
-function ProductCard() {
-
+function ProductList({products}) {
     return (
         <>
-            {
-                products.map(p => (
-                    <div key={p.id} className='productCard'>
-                        <div className='productImg'></div>
-                        <div className='productDetails'>
-                            <p>{p.name}</p>
-                            <p>{p.price}</p>
-                        </div>
-                        <div className='productColours'>
-                            {p.colours.map((colour, i) => (
-                                <div key={i} className='colour' style={{ backgroundColor: colour}}></div>
-                            ))}
-                        </div>
-                        <button className='addCartBtn'>Add To Cart</button>
-                    </div>
-                ))
-            }
+            {products.map(p => (
+                <ProductCard key={p.id} p={p} />
+            ))}
         </>
+    )
+}
+
+
+function ProductCard({p}) {
+
+    return (    
+        <div className='productCard'>
+            <div className='productImg'></div>
+            <div className='productDetails'>
+                <p>{p.name}</p>
+                <p>{p.price}</p>
+            </div>
+            <div className='productColours'>
+                {p.colours.map((colour, i) => (
+                    <div key={i} className='colour' style={{ backgroundColor: colour}}></div>
+                ))}
+            </div>
+            <button className='addCartBtn'>Add To Cart</button>
+        </div>
     )
 }
 
@@ -126,7 +131,7 @@ export default function Products() {
                 </div>
 
                 <section className='productCon col-span-full md:col-span-6 lg:col-span-9'>
-                    <ProductCard />
+                    <ProductList products={productsData}/>
                 </section>
 
             </section>
