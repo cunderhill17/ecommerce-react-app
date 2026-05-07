@@ -1,0 +1,104 @@
+.mainContactSection {
+    margin-bottom: 75px;
+}
+
+.contactIcon {
+    width: 25px;
+}
+
+.contactForm {
+    padding: 15px;
+
+    h2 {
+        margin-bottom: 25px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        .conFullName {
+            display: flex;
+            gap: 25px;
+
+            .conName {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        .inputHalf {
+            width: 166px;
+            height: 38px;
+        }
+
+        .inputFull {
+            width: 361px;
+            height: 38px;
+        }
+
+        .textareaFull {
+            width: 361px;
+            height: 183px;
+            resize: none;
+        }
+
+        .inputHalf, .inputFull, .textareaFull {
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            padding: 5px;
+        }
+
+        button {
+            width: 164px;
+            height: 36px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+    }
+}
+
+
+.mapContainer {
+    width: 376px;
+    height: 522px;
+    border-radius: 25px;
+    padding: 25px;
+    background-color: #D9D9D9;
+    margin: 0px auto;
+
+    .contactMap {
+        width: 325px;
+        height: 207px;
+        background-color: #888888;
+        border-radius: 15px;
+    }
+
+    .contactDetails {
+        display: flex;
+        gap: 15px;
+        margin-top: 15px;
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .socialMediaCon {
+        margin: 40px 0px 25px 0px;
+
+        .iconCon {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+    }
+}
+

@@ -1,4 +1,6 @@
 import './global/grid.css'
+import './Contact.css'
+
 import envelope from './assets/envelope-icon.svg'
 import map from './assets/map-icon.svg'
 import telephone from './assets/telephone-icon.svg'
@@ -11,25 +13,32 @@ import Newsletter from './Newsletter'
 export default function Contact() {
     return (
         <main>
-            <section className="grid-con">
+            <section className="mainContactSection grid-con">
 
-                <div className="col-span-full">
-                    <h1>Get In Touch</h1>
+                <div className="contactForm col-span-full md:col-span-4 lg:col-span-6">
+                    <h2>Get In Touch</h2>
                     <form action="#">
-                        <label htmlFor="fname">First Name</label>
-                        <input type="text" placeholder='enter your first name' />
 
-                        <label htmlFor="lname">Last Name</label>
-                        <input type="text" placeholder='enter your last name' />
+                        <div className='conFullName'>
+                            <div className='conName'>
+                                <label htmlFor="fname">First Name</label>
+                                <input className='inputHalf' type="text" placeholder='enter your first name' />
+                            </div>
+
+                            <div className='conName'>
+                                <label htmlFor="lname">Last Name</label>
+                                <input className='inputHalf' type="text" placeholder='enter your last name' />
+                            </div>  
+                        </div>
 
                         <label htmlFor="eml">Email Address</label>
-                        <input type="text" placeholder='enter your email address' />
+                        <input className='inputFull' type="text" placeholder='enter your email address' />
 
                         <label htmlFor="subj">Subject</label>
-                        <input type="text" placeholder='enter subject of message' />
+                        <input className='inputFull' type="text" placeholder='enter subject of message' />
 
                         <label htmlFor="mssg">Message</label>
-                        <textarea name="mssg" id="mssg"></textarea>
+                        <textarea className='textareaFull' name="mssg" id="mssg"></textarea>
 
                         <label htmlFor="tAndC">
                             <input type="checkbox" name="tAndC" id="tAndC" /> I’ve read and agree with the terms and conditions
@@ -39,38 +48,38 @@ export default function Contact() {
                     </form>
                 </div>
 
-                <div className="col-span-full">
+                <div className="col-span-full md:col-span-4 lg:col-span-6">
                     <div className='mapContainer'>
-                        <div className='contactMap'>Map</div>
+                        <div className='contactMap'></div>
 
-                        <div>
-                            <img src={telephone} alt="Telephone Icon" />
+                        <div className='contactDetails'>
+                            <img className='contactIcon' src={telephone} alt="Telephone Icon" />
                             <p>1 (000) 000-0000</p>
                         </div>
 
-                        <div>
-                            <img src={map} alt="Map Icon" />
+                        <div className='contactDetails'>
+                            <img className='contactIcon' src={map} alt="Map Icon" />
                             <p>76 Willow Drive, London ON, Canada, N6H1K2</p>
                         </div>
 
-                        <div>
-                            <img src={envelope} alt="Envelope Icon" />
+                        <div className='contactDetails'>
+                            <img className='contactIcon' src={envelope} alt="Envelope Icon" />
                             <p>contact@email.com</p>
                         </div>
 
-                        <div>
+                        <div className='socialMediaCon'>
                             <h2>Connect With Us</h2>
                             <div className='iconCon'>
                                 <a href="#">
-                                   <img src={pinterest} alt="Pinterest Icon" /> 
+                                   <img className='contactIcon' src={pinterest} alt="Pinterest Icon" /> 
                                 </a>
                                 
                                 <a href="#">
-                                   <img src={facebook} alt="Facebook Icon" /> 
+                                   <img className='contactIcon' src={facebook} alt="Facebook Icon" /> 
                                 </a>
 
                                 <a href="#">
-                                   <img src={instagram} alt="Instagram Icon" /> 
+                                   <img className='contactIcon' src={instagram} alt="Instagram Icon" /> 
                                 </a>
                             </div>
                         </div>
