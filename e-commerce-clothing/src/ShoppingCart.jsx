@@ -1,21 +1,20 @@
 import './global/grid.css'
+import './ShoppingCart.css'
 
 
 function CartItem() {
     return (
         <div className='cartItem'>
             <div className='cartImage'>
-                <div>Image</div>
+                <div className='itemImage'></div>
                 <button>Remove From Cart</button>
             </div>
 
             <div className='cartItemDetails'>
                 <div className='itemName'>
                     <p>Product Name</p>
-                    <p>This is where product details will go</p>
-                </div>
-
-                <p className='itemCost'>$50.99</p>
+                    <p>$50.99</p>
+                </div>                
             
                 <div className='itemQuantity'>
                     <button>-</button>
@@ -55,12 +54,13 @@ export default function ShoppingCart() {
                         <p>Total Cost</p>
                         <p>$189.94</p>
                     </div>
+                    <button>Check Out</button>
                 </section>
 
-                <section className='col-span-full'>
-                    <div>
-                    <h2>Shopping Cart</h2>
-                    <p>3 Items</p> 
+                <section className='shoppingCartItems col-span-full'>
+                    <div className='shoppingCartTitle'>
+                        <h2>Shopping Cart</h2>
+                        <p>3 Items</p> 
                     </div>
                     <hr />
 
