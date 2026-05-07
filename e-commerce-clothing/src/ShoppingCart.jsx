@@ -23,7 +23,7 @@ function CartItem() {
                 </div>
 
                 <div className='itemTotal'>
-                    <p>Total</p>
+                    <p className='totalTitle'>Total</p>
                     <p>$101.98</p>
                 </div>
             </div>
@@ -36,7 +36,7 @@ export default function ShoppingCart() {
     return (
         <main>
             <div className="grid-con">
-                <section className='orderSummary col-span-full'>
+                <section className='orderSummary col-span-full md:col-span-4 lg:col-span-4'>
                     <h2>Order Summary</h2>
                     <hr />
                     <div className='orderSubTotal'>
@@ -57,13 +57,15 @@ export default function ShoppingCart() {
                     <button>Check Out</button>
                 </section>
 
-                <section className='shoppingCartItems col-span-full'>
+                <section className='shoppingCartItems col-span-full md:col-span-4 lg:col-span-8'>
                     <div className='shoppingCartTitle'>
                         <h2>Shopping Cart</h2>
                         <p>3 Items</p> 
                     </div>
                     <hr />
 
+                    <CartItem />
+                    <CartItem />
                     <CartItem />
                 </section>
             </div>
