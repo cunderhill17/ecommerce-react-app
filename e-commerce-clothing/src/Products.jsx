@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react'
+
 import './global/grid.css'
 import './Products.css'
 import productsData from './data/products.json'
@@ -7,7 +9,12 @@ import filter from './assets/filter-icon.svg'
 
 
 
-function Filter() {
+function Filter({setCategory, setMaxPrice, setColour}) {
+
+    function updateFilters(setFilterValue, e) {
+        setFilterValue(e.target.value);
+    }
+
     return (
         <>
             <details>
@@ -15,31 +22,35 @@ function Filter() {
 
                 <div className="filterCatCon">
                     <label>
-                        <input type="checkbox" name="category" value="tshirts" /> T-Shirts
+                        <input type="radio" name="category" value="" onChange={(event) => updateFilters(setCategory, event)}/> All Categories
                     </label>
                     
                     <label>
-                        <input type="checkbox" name="category" value="blouse" /> Blouse
+                        <input type="radio" name="category" value="tshirt" onChange={(event) => updateFilters(setCategory, event)}/> T-Shirts
                     </label>
                     
                     <label>
-                        <input type="checkbox" name="category" value="tanktop" /> Tank Top
+                        <input type="radio" name="category" value="blouse" onChange={(event) => updateFilters(setCategory, event)}/> Blouse
                     </label>
                     
                     <label>
-                        <input type="checkbox" name="category" value="trousers" /> Trousers
+                        <input type="radio" name="category" value="tanktop" onChange={(event) => updateFilters(setCategory, event)}/> Tank Top
                     </label>
                     
                     <label>
-                        <input type="checkbox" name="category" value="slacks" /> Slacks
+                        <input type="radio" name="category" value="trousers" onChange={(event) => updateFilters(setCategory, event)}/> Trousers
+                    </label>
+                    
+                    <label>
+                        <input type="radio" name="category" value="slacks" onChange={(event) => updateFilters(setCategory, event)}/> Slacks
                     </label>
 
                     <label>
-                        <input type="checkbox" name="category" value="jeans" /> Jeans
+                        <input type="radio" name="category" value="jeans" onChange={(event) => updateFilters(setCategory, event)}/> Jeans
                     </label>
 
                     <label>
-                        <input type="checkbox" name="category" value="cardigan" /> Cardigan
+                        <input type="radio" name="category" value="cardigan" onChange={(event) => updateFilters(setCategory, event)}/> Cardigan
                     </label>
                 </div>
             </details>
@@ -49,15 +60,19 @@ function Filter() {
 
                 <div className="filterCatCon">
                     <label>
-                        <input type="checkbox" name="maxPrice" value="25" /> &lt; 25
+                        <input type="radio" name="maxPrice" value="" onChange={(event) => updateFilters(setMaxPrice, event)}/> All Prices
+                    </label>
+
+                    <label>
+                        <input type="radio" name="maxPrice" value="25" onChange={(event) => updateFilters(setMaxPrice, event)}/> &lt; 25
                     </label>
                     
                     <label>
-                        <input type="checkbox" name="maxPrice" value="50" /> &lt; 50
+                        <input type="radio" name="maxPrice" value="50" onChange={(event) => updateFilters(setMaxPrice, event)}/> &lt; 50
                     </label>
                     
                     <label>
-                        <input type="checkbox" name="maxPrice" value="75" /> &lt; 75
+                        <input type="radio" name="maxPrice" value="75" onChange={(event) => updateFilters(setMaxPrice, event)}/> &lt; 75
                     </label>
                 </div>
             </details>
@@ -67,15 +82,19 @@ function Filter() {
 
                 <div className='filterCatCon'>
                     <label>
-                        <input type="checkbox" name="colour" value="red" /> Red
+                        <input type="radio" name="colour" value="" onChange={(event) => updateFilters(setColour, event)}/> All Colours
+                    </label>
+
+                    <label>
+                        <input type="radio" name="colour" value="red" onChange={(event) => updateFilters(setColour, event)}/> Red
                     </label>
                     
                     <label>
-                        <input type="checkbox" name="colour" value="navy" /> Navy
+                        <input type="radio" name="colour" value="navy" onChange={(event) => updateFilters(setColour, event)}/> Navy
                     </label>
                     
                     <label>
-                        <input type="checkbox" name="colour" value="beige" /> Beige
+                        <input type="radio" name="colour" value="beige" onChange={(event) => updateFilters(setColour, event)}/> Beige
                     </label>
                 </div>
                 
@@ -118,6 +137,32 @@ function ProductCard({p}) {
 
 
 export default function Products() {
+    const originalProducts = productsData;
+    const [filteredProducts, setFilteredProducts] = useState(originalProducts);
+
+    const [category, setCategory] = useState('');
+    const [maxPrice, setMaxPrice] = useState('');
+    const [colour, setColour] = useState('');
+
+    useEffect(() => {
+        let newFiltered = originalProducts;
+
+        if(category != '') {
+           newFiltered = newFiltered.filter(p => p.category === category);
+        }
+
+        if(maxPrice != '') {
+            newFiltered = newFiltered.filter(p => Number(p.price) <= Number(maxPrice));
+        }
+
+        if(colour != '') {
+            newFiltered = newFiltered.filter(p => p.colours.includes(colour));
+        }
+
+        setFilteredProducts(newFiltered);
+
+    }, [category, maxPrice, colour])
+
     return (
         <main>
             <section className='grid-con'>
@@ -127,11 +172,11 @@ export default function Products() {
                 </div>
 
                 <div className='tabFilter md:col-span-2 lg:col-span-3'>
-                    <Filter/>
+                    <Filter setCategory={setCategory} setMaxPrice={setMaxPrice} setColour={setColour} />
                 </div>
 
                 <section className='productCon col-span-full md:col-span-6 lg:col-span-9'>
-                    <ProductList products={productsData}/>
+                    <ProductList products={filteredProducts}/>
                 </section>
 
             </section>
