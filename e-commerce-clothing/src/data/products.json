@@ -16,7 +16,7 @@
         "price": 50.99,
         "stock": 5,
         "category": "tshirt",
-        "colours": ["red", "blue", "beige"]
+        "colours": ["red", "navy", "beige"]
     },
 
     {
@@ -26,7 +26,7 @@
         "price": 50.99,
         "stock": 5,
         "category": "tshirt",
-        "colours": ["red", "blue"]
+        "colours": ["red", "navy"]
     },
 
     {
@@ -46,7 +46,7 @@
         "price": 50.99,
         "stock": 5,
         "category": "blouse",
-        "colours": ["blue"]
+        "colours": ["navy"]
     },
 
     {
@@ -56,7 +56,7 @@
         "price": 50.99,
         "stock": 5,
         "category": "blouse",
-        "colours": ["red", "blue", "beige"]
+        "colours": ["red", "navy", "beige"]
     },
 
     {
@@ -86,7 +86,7 @@
         "price": 50.99,
         "stock": 5,
         "category": "tanktop",
-        "colours": ["blue"]
+        "colours": ["navy"]
     },
 
     {
@@ -96,7 +96,7 @@
         "price": 50.99,
         "stock": 5,
         "category": "jeans",
-        "colours": ["red", "blue", "beige"]
+        "colours": ["red", "navy", "beige"]
     },
 
     {
@@ -116,7 +116,7 @@
         "price": 50.99,
         "stock": 5,
         "category": "slacks",
-        "colours": ["red", "blue"]
+        "colours": ["red", "navy"]
     },
 
     {
@@ -126,7 +126,7 @@
         "price": 50.99,
         "stock": 5,
         "category": "trousers",
-        "colours": ["beige", "blue"]
+        "colours": ["beige", "navy"]
     },
 
     {
@@ -146,7 +146,7 @@
         "price": 50.99,
         "stock": 5,
         "category": "cardigan",
-        "colours": ["blue"]
+        "colours": ["navy"]
     },
 
     {
