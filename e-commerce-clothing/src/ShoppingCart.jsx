@@ -1,38 +1,58 @@
 import './global/grid.css'
 import './ShoppingCart.css'
 
+import { useOutletContext } from 'react-router-dom'
 
-function CartItem() {
+
+function CartItem({item, removeFromCart}) {
     return (
         <div className='cartItem'>
             <div className='cartImage'>
                 <div className='itemImage'></div>
-                <button>Remove From Cart</button>
+                <button onClick={() => removeFromCart(item)}>Remove From Cart</button>
             </div>
 
             <div className='cartItemDetails'>
                 <div className='itemName'>
-                    <p>Product Name</p>
-                    <p>$50.99</p>
+                    <p>{item.name}</p>
+                    <p>{item.price}</p>
                 </div>                
             
                 <div className='itemQuantity'>
                     <button>-</button>
-                    <p>2</p>
+                    <p>1</p>
                     <button>+</button>
                 </div>
 
                 <div className='itemTotal'>
                     <p className='totalTitle'>Total</p>
-                    <p>$101.98</p>
+                    <p>{item.price}</p>
                 </div>
             </div>
         </div>
     )
 }
 
+function CartList({cartItems, setCartItems}) {
+
+    function removeFromCart(item) {
+        setCartItems(prev => prev.filter(p => p.id !== item.id))
+    }
+
+    return (
+        <>
+            {cartItems.map(item => (
+                <CartItem key={item.id} item={item} removeFromCart={removeFromCart}/>
+            ))}
+        </>
+    )
+
+}
+
 
 export default function ShoppingCart() {
+    const { cartItems, setCartItems } = useOutletContext();
+
     return (
         <main>
             <div className="grid-con">
@@ -40,7 +60,7 @@ export default function ShoppingCart() {
                     <h2>Order Summary</h2>
                     <hr />
                     <div className='orderSubTotal'>
-                        <p>Items: 3</p>
+                        <p>Items: {cartItems.length}</p>
                         <p>$189.94</p>
                     </div>
 
@@ -60,13 +80,12 @@ export default function ShoppingCart() {
                 <section className='shoppingCartItems col-span-full md:col-span-4 lg:col-span-8'>
                     <div className='shoppingCartTitle'>
                         <h2>Shopping Cart</h2>
-                        <p>3 Items</p> 
+                        <p>{cartItems.length} Items</p> 
                     </div>
                     <hr />
 
-                    <CartItem />
-                    <CartItem />
-                    <CartItem />
+                    <CartList cartItems={cartItems} setCartItems={setCartItems}/>
+
                 </section>
             </div>
 
