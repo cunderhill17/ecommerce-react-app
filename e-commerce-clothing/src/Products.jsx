@@ -106,9 +106,23 @@ function Filter({setCategory, setMaxPrice, setColour}) {
 }
 
 
-function ProductList({products, setCartItems}) {
+function ProductList({products, cartItems, setCartItems}) {
     function addToCart(p) {
-        setCartItems(prev => [...prev, p]);
+
+        const existingItem = cartItems.find(item => item.id === p.id);
+
+        if(existingItem) {
+            setCartItems(prev => prev.map(
+                item => item.id === p.id 
+                ? {
+                    ...item, purchaseQuantity: Number(item.purchaseQuantity) + 1
+                } : item
+            ));
+        } else {
+            setCartItems(prev => [...prev, p]);
+        }
+
+        
     }
 
     return (
@@ -183,7 +197,7 @@ export default function Products() {
                 </div>
 
                 <section className='productCon col-span-full md:col-span-6 lg:col-span-9'>
-                    <ProductList products={filteredProducts} setCartItems={setCartItems}/>
+                    <ProductList products={filteredProducts} cartItems={cartItems} setCartItems={setCartItems}/>
                 </section>
 
             </section>
