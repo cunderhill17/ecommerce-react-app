@@ -2,6 +2,7 @@ import './global/grid.css'
 import './ShoppingCart.css'
 
 import { useOutletContext } from 'react-router-dom'
+import { useRef, useEffect, useState } from "react";
 
 
 function CartItem({item, removeFromCart, increaseQuantity, decreaseQuantity}) {
@@ -71,15 +72,45 @@ function CartList({cartItems, setCartItems}) {
 
 
 export default function ShoppingCart() {
-    const { cartItems, setCartItems } = useOutletContext();
+    const { cartItems, setCartItems, usedPromo, setUsedPromo } = useOutletContext();
+    const promoCodes = [
+        {
+            "name": "promo10",
+            "value": 0.10
+        },
+        {
+            "name": "promo15",
+            "value": 0.15
+        }
+    ];
 
-    let totalQuantity = cartItems.reduce(
+    const myRef = useRef(null);
+
+    const totalQuantity = cartItems.reduce(
         (total, item) => total + Number(item.purchaseQuantity), 0
     )
 
-    let totalCost = cartItems.reduce(
-        (total, item) => total + (Number(item.purchaseQuantity) * Number(item.price)), 0
-    )
+    const subtotal = cartItems.reduce(
+            (total, item) => total + (Number(item.purchaseQuantity) * Number(item.price)), 0
+        );
+    
+    const discountedTotal = usedPromo.used 
+        ? subtotal - (subtotal * usedPromo.value)
+        : subtotal;
+        
+    const finalTotal = discountedTotal * 1.13;
+        
+    function applyPromo() {
+        const userPromo = promoCodes.find(promo => promo.name === myRef.current.value.trim().toLowerCase())
+
+        if (userPromo && !usedPromo.used) {
+            setUsedPromo({
+                "used": true,
+                "name": userPromo.name,
+                "value": userPromo.value
+            })
+        }
+    }
 
     return (
         <main>
@@ -89,18 +120,21 @@ export default function ShoppingCart() {
                     <hr />
                     <div className='orderSubTotal'>
                         <p>Items: {totalQuantity}</p>
-                        <p>$ {totalCost}</p>
+                        <p>$ {discountedTotal.toFixed(2)}</p>
                     </div>
 
                     <div className='orderPromo'>
                         <label htmlFor="promoCode">Promo Code</label>
-                        <input type="text" />
-                        <button>Apply</button>
+                        <input ref={myRef} type="text" />
+                        <button onClick={applyPromo}>Apply</button>
+                        {
+                            usedPromo.used ? <p>Promo Code Used: {usedPromo.name}</p> : <p>No Promo Code has been used</p>
+                        }
                     </div>
                     <hr />
                     <div className='orderTotal'>
                         <p>Total Cost</p>
-                        <p>$ {(totalCost * 1.13).toFixed(2)}</p>
+                        <p>$ {finalTotal.toFixed(2)}</p>
                     </div>
                     <button>Check Out</button>
                 </section>

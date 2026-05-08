@@ -12,6 +12,11 @@ import ShoppingCart from './ShoppingCart'
 
 function AppLayout() {
     const [cartItems, setCartItems] = useState([]);
+    const [usedPromo, setUsedPromo] = useState({
+        "used": false,
+        "name": "",
+        "value": 0
+    });
 
     useEffect(() => {
         console.log(cartItems);
@@ -20,7 +25,7 @@ function AppLayout() {
     return (
         <>
             <Header cartItems={cartItems}/>         
-            <Outlet context={{ cartItems, setCartItems }}/>
+            <Outlet context={{ cartItems, setCartItems, usedPromo, setUsedPromo }}/>
             <Footer />         
         </>
     )
