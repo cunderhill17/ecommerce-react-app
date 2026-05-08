@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 import Header from './header'
@@ -10,10 +11,16 @@ import ShoppingCart from './ShoppingCart'
 
 
 function AppLayout() {
+    const [cartItems, setCartItems] = useState([]);
+
+    useEffect(() => {
+        console.log(cartItems);
+    }, [cartItems]);
+
     return (
         <>
-            <Header />         
-            <Outlet />
+            <Header cartItems={cartItems}/>         
+            <Outlet context={{ cartItems, setCartItems }}/>
             <Footer />         
         </>
     )

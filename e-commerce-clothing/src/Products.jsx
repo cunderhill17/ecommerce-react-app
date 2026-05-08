@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useOutletContext } from 'react-router-dom'
 
 import './global/grid.css'
 import './Products.css'
@@ -105,18 +106,22 @@ function Filter({setCategory, setMaxPrice, setColour}) {
 }
 
 
-function ProductList({products}) {
+function ProductList({products, setCartItems}) {
+    function addToCart(p) {
+        setCartItems(prev => [...prev, p]);
+    }
+
     return (
         <>
             {products.map(p => (
-                <ProductCard key={p.id} p={p} />
+                <ProductCard key={p.id} p={p} addToCart={addToCart}/>
             ))}
         </>
     )
 }
 
 
-function ProductCard({p}) {
+function ProductCard({p, addToCart}) {
 
     return (    
         <div className='productCard'>
@@ -130,7 +135,7 @@ function ProductCard({p}) {
                     <div key={i} className='colour' style={{ backgroundColor: colour}}></div>
                 ))}
             </div>
-            <button className='addCartBtn'>Add To Cart</button>
+            <button className='addCartBtn' onClick={() => addToCart(p)}>Add To Cart</button>
         </div>
     )
 }
@@ -143,6 +148,8 @@ export default function Products() {
     const [category, setCategory] = useState('');
     const [maxPrice, setMaxPrice] = useState('');
     const [colour, setColour] = useState('');
+
+    const { cartItems, setCartItems } = useOutletContext();
 
     useEffect(() => {
         let newFiltered = originalProducts;
@@ -176,7 +183,7 @@ export default function Products() {
                 </div>
 
                 <section className='productCon col-span-full md:col-span-6 lg:col-span-9'>
-                    <ProductList products={filteredProducts}/>
+                    <ProductList products={filteredProducts} setCartItems={setCartItems}/>
                 </section>
 
             </section>
