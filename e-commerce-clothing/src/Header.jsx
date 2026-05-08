@@ -6,7 +6,12 @@ import cart from './assets/cart-icon.svg'
 import menuIcon from './assets/menu-icon.svg'
 import search from './assets/search-icon.svg'
 
-export default function Header() {
+export default function Header({cartItems}) {
+    
+    let totalQuantity = cartItems.reduce(
+        (total, item) => total + Number(item.purchaseQuantity), 0
+    )
+
     return (
         <header className='grid-con'>
             <h1 className='col-span-full'>Name of Clothing Brand</h1>
@@ -34,6 +39,7 @@ export default function Header() {
                     <img className='searchIcon' src={search} alt="Search Icon" />
                     <input type="search" name="productSearch" id="productSearch" placeholder='Search...' />
                     <NavLink to="/shoppingcart">
+                        <p>{totalQuantity}</p>
                         <img className='cartIcon' src={cart} alt="Shopping Cart Icon" />
                     </NavLink>
                 </div>
