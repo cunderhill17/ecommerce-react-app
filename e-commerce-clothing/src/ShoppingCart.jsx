@@ -4,7 +4,7 @@ import './ShoppingCart.css'
 import { useOutletContext } from 'react-router-dom'
 
 
-function CartItem({item, removeFromCart}) {
+function CartItem({item, removeFromCart, increaseQuantity, decreaseQuantity}) {
     return (
         <div className='cartItem'>
             <div className='cartImage'>
@@ -19,14 +19,14 @@ function CartItem({item, removeFromCart}) {
                 </div>                
             
                 <div className='itemQuantity'>
-                    <button>-</button>
-                    <p>1</p>
-                    <button>+</button>
+                    <button onClick={() => decreaseQuantity(item)}>-</button>
+                    <p>{item.purchaseQuantity}</p>
+                    <button onClick={() => increaseQuantity(item)}>+</button>
                 </div>
 
                 <div className='itemTotal'>
                     <p className='totalTitle'>Total</p>
-                    <p>{item.price}</p>
+                    <p>$ {(Number(item.price) * Number(item.purchaseQuantity)).toFixed(2)}</p>
                 </div>
             </div>
         </div>
@@ -39,10 +39,30 @@ function CartList({cartItems, setCartItems}) {
         setCartItems(prev => prev.filter(p => p.id !== item.id))
     }
 
+    function increaseQuantity(item) {
+        setCartItems(prev => prev.map(
+            p => p.id === item.id 
+            ? {
+                ...p, purchaseQuantity: Number(p.purchaseQuantity) + 1
+            } : p
+        ));
+    }
+
+    function decreaseQuantity(item) {
+        if (Number(item.purchaseQuantity) > 1) {
+            setCartItems(prev => prev.map(
+                p => p.id === item.id 
+                ? {
+                    ...p, purchaseQuantity: Number(p.purchaseQuantity) - 1
+                } : p
+            ));
+        }
+    }
+
     return (
         <>
             {cartItems.map(item => (
-                <CartItem key={item.id} item={item} removeFromCart={removeFromCart}/>
+                <CartItem key={item.id} item={item} removeFromCart={removeFromCart} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity}/>
             ))}
         </>
     )
@@ -53,6 +73,14 @@ function CartList({cartItems, setCartItems}) {
 export default function ShoppingCart() {
     const { cartItems, setCartItems } = useOutletContext();
 
+    let totalQuantity = cartItems.reduce(
+        (total, item) => total + Number(item.purchaseQuantity), 0
+    )
+
+    let totalCost = cartItems.reduce(
+        (total, item) => total + (Number(item.purchaseQuantity) * Number(item.price)), 0
+    )
+
     return (
         <main>
             <div className="grid-con">
@@ -60,8 +88,8 @@ export default function ShoppingCart() {
                     <h2>Order Summary</h2>
                     <hr />
                     <div className='orderSubTotal'>
-                        <p>Items: {cartItems.length}</p>
-                        <p>$189.94</p>
+                        <p>Items: {totalQuantity}</p>
+                        <p>$ {totalCost}</p>
                     </div>
 
                     <div className='orderPromo'>
@@ -72,7 +100,7 @@ export default function ShoppingCart() {
                     <hr />
                     <div className='orderTotal'>
                         <p>Total Cost</p>
-                        <p>$189.94</p>
+                        <p>$ {(totalCost * 1.13).toFixed(2)}</p>
                     </div>
                     <button>Check Out</button>
                 </section>
@@ -80,7 +108,7 @@ export default function ShoppingCart() {
                 <section className='shoppingCartItems col-span-full md:col-span-4 lg:col-span-8'>
                     <div className='shoppingCartTitle'>
                         <h2>Shopping Cart</h2>
-                        <p>{cartItems.length} Items</p> 
+                        <p>{totalQuantity} Items</p> 
                     </div>
                     <hr />
 

@@ -5,6 +5,7 @@
         "description": "A lightweight cotton T-shirt designed with a smooth, brushed finish that feels soft against the skin. It features a slightly curved hem and a relaxed fit for effortless everyday wear.",
         "price": 50.99,
         "stock": 5,
+        "purchaseQuantity": 1,
         "category": "tshirt",
         "colours": ["beige"]
     },
@@ -15,6 +16,7 @@
         "description": "A structured crewneck T-shirt with reinforced stitching along the collar and sleeves. Built for durability while maintaining a clean, minimalist look.",
         "price": 50.99,
         "stock": 5,
+        "purchaseQuantity": 1,
         "category": "tshirt",
         "colours": ["red", "navy", "beige"]
     },
@@ -25,6 +27,7 @@
         "description": "A flowy T-shirt with a deep V-neckline and a fluid silhouette. The fabric drapes elegantly, making it suitable for both casual and elevated outfits.",
         "price": 50.99,
         "stock": 5,
+        "purchaseQuantity": 1,
         "category": "tshirt",
         "colours": ["red", "navy"]
     },
@@ -35,6 +38,7 @@
         "description": "A semi-formal blouse with a soft collar and hidden button placket. Designed with subtle tailoring at the waist for a flattering, office-ready fit.",
         "price": 50.99,
         "stock": 5,
+        "purchaseQuantity": 1,
         "category": "blouse",
         "colours": ["red"]
     },
@@ -45,6 +49,7 @@
         "description": "A smooth, satin-like blouse that reflects light subtly. It includes cuffed sleeves and a relaxed neckline, ideal for dressy occasions.",
         "price": 50.99,
         "stock": 5,
+        "purchaseQuantity": 1,
         "category": "blouse",
         "colours": ["navy"]
     },
@@ -55,6 +60,7 @@
         "description": "A loose-fitting blouse with an all-over floral print and airy fabric. The slightly puffed sleeves add a gentle, romantic style.",
         "price": 50.99,
         "stock": 5,
+        "purchaseQuantity": 1,
         "category": "blouse",
         "colours": ["red", "navy", "beige"]
     },
@@ -65,6 +71,7 @@
         "description": "A fitted tank top made from stretchy ribbed fabric. It contours the body comfortably and works well layered or worn on its own.",
         "price": 50.99,
         "stock": 5,
+        "purchaseQuantity": 1,
         "category": "tanktop",
         "colours": ["beige"]
     },
@@ -75,6 +82,7 @@
         "description": "A breathable tank top featuring micro-vented fabric for enhanced airflow. Designed for warm climates or active days.",
         "price": 50.99,
         "stock": 5,
+        "purchaseQuantity": 1,
         "category": "tanktop",
         "colours": ["red"]
     },
@@ -85,6 +93,7 @@
         "description": "A relaxed-fit tank made from lightweight linen. Its natural texture and loose cut give it a laid-back, coastal feel.",
         "price": 50.99,
         "stock": 5,
+        "purchaseQuantity": 1,
         "category": "tanktop",
         "colours": ["navy"]
     },
@@ -95,6 +104,7 @@
         "description": "Classic denim jeans with a straight-leg cut and medium wash. Designed for long-lasting wear with a timeless silhouette.",
         "price": 50.99,
         "stock": 5,
+        "purchaseQuantity": 1,
         "category": "jeans",
         "colours": ["red", "navy", "beige"]
     },
@@ -105,6 +115,7 @@
         "description": "Slim-fit jeans with stretch-enhanced fabric that adapts to movement. They provide a sleek, close-to-body fit without restricting comfort.",
         "price": 50.99,
         "stock": 5,
+        "purchaseQuantity": 1,
         "category": "jeans",
         "colours": ["red", "beige"]
     },
@@ -115,6 +126,7 @@
         "description": "Polished slacks with a tapered leg and pressed front crease. Ideal for professional settings, offering a sharp and refined appearance.",
         "price": 50.99,
         "stock": 5,
+        "purchaseQuantity": 1,
         "category": "slacks",
         "colours": ["red", "navy"]
     },
@@ -125,6 +137,7 @@
         "description": "Flowy trousers with a high waist and wide-leg design. They create a bold, elegant shape while allowing ease of movement.",
         "price": 50.99,
         "stock": 5,
+        "purchaseQuantity": 1,
         "category": "trousers",
         "colours": ["beige", "navy"]
     },
@@ -135,6 +148,7 @@
         "description": "Casual trousers with a slightly loose cut and soft fabric. Designed for comfort while maintaining a clean, structured look.",
         "price": 50.99,
         "stock": 5,
+        "purchaseQuantity": 1,
         "category": "trousers",
         "colours": ["beige"]
     },
@@ -145,6 +159,7 @@
         "description": "A mid-weight knit cardigan with a button-down front and ribbed cuffs. Versatile enough to layer over both casual and dressy outfits.",
         "price": 50.99,
         "stock": 5,
+        "purchaseQuantity": 1,
         "category": "cardigan",
         "colours": ["navy"]
     },
@@ -155,6 +170,7 @@
         "description": "An open-front cardigan with a fluid, draped silhouette. Designed to fall naturally along the body for a relaxed, modern style.",
         "price": 50.99,
         "stock": 5,
+        "purchaseQuantity": 1,
         "category": "cardigan",
         "colours": ["red"]
     }
