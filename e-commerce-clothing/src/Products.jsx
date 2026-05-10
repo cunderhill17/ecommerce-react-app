@@ -3,7 +3,7 @@ import { useOutletContext } from 'react-router-dom'
 
 import './global/grid.css'
 import './Products.css'
-import productsData from './data/products.json'
+// import productsData from './data/products.json'
 import filter from './assets/filter-icon.svg'
 
 
@@ -156,14 +156,14 @@ function ProductCard({p, addToCart}) {
 
 
 export default function Products() {
-    const originalProducts = productsData;
+    // const originalProducts = productsData;
+    const { cartItems, setCartItems, originalProducts } = useOutletContext();
+
     const [filteredProducts, setFilteredProducts] = useState(originalProducts);
 
     const [category, setCategory] = useState('');
     const [maxPrice, setMaxPrice] = useState('');
     const [colour, setColour] = useState('');
-
-    const { cartItems, setCartItems } = useOutletContext();
 
     useEffect(() => {
         let newFiltered = originalProducts;
