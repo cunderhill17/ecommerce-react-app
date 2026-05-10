@@ -12,6 +12,10 @@ export default function Header({cartItems}) {
         (total, item) => total + Number(item.purchaseQuantity), 0
     )
 
+    function toggleNavMenu() {
+        
+    }
+
     return (
         <header className='grid-con'>
             <h1 className='col-span-full'>Name of Clothing Brand</h1>

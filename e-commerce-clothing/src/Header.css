@@ -11,6 +11,7 @@ h1 {
 }
 
 .navMenu {
+    position: relative;
     background-color: #CCBD89;
     padding: 35px 15px 35px 25px;
 }
@@ -23,10 +24,19 @@ h1 {
 
 .navLinks {
     display: none;
+    position: absolute;
+    top: 140px;
     align-items: center;
+    justify-content: center;
+
+    width: 300px;
+    background-color: #332904;
+    box-shadow: 3px 3px 3px rgba(0,0,0, 0.5);
+    padding: 50px;
 
     ul {
         display: flex;
+        flex-direction: column;
         gap: 25px;
         align-items: center;
         list-style-type: none;
@@ -34,7 +44,7 @@ h1 {
         li {
             a {
                 text-decoration: none;
-                color: #332904;
+                color: #CCBD89;
                  
                 &:hover {
                     color: #FFFFFF;
@@ -96,6 +106,27 @@ h1 {
 
     .navLinks {
         display: flex;
+        justify-content: left;
+        position: static;
+        background-color: transparent;
+        padding: 0px;
+        width: auto;
+        box-shadow: none;
+
+        ul {
+            flex-direction: row;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: #332904;
+                    
+                    &:hover {
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
     }
 }
 
