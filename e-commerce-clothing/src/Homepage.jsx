@@ -1,4 +1,5 @@
 import { useOutletContext } from 'react-router-dom'
+import { useState } from 'react';
 
 import Newsletter from "./Newsletter"
 import { ProductList } from "./Products";
@@ -6,11 +7,21 @@ import './global/grid.css'
 import './Homepage.css'
 
 export default function Homepage() {
+    let carouselArray = ['Image One', 'Image Two', 'Image Three', 'Image Four'];
+
+    const [currentCarouselImg, setCurrentCarouselImg] = useState(carouselArray[0]);
     const { cartItems, setCartItems, originalProducts } = useOutletContext();
 
     const bestsellers = originalProducts.filter(p => p.bestSeller === true);
 
+    function updateCarousel(e) {
+        let currentCarouselIndex = Number(e.target.value);
+
+        setCurrentCarouselImg(carouselArray[currentCarouselIndex]);
+    }
+
     return (
+
         <main>
 
             <section className="hero-section grid-con">
@@ -43,13 +54,20 @@ export default function Homepage() {
             </section>
 
             <section className="carousel grid-con">
-                <div className="carouselImg col-span-full md:col-span-2 lg:col-span-3">Image 1</div>
+                <div className="carouselImg col-span-full md:col-span-2 lg:col-span-3">{currentCarouselImg}</div>
 
                 <div className='carouselBtns'>
-                    <input type="radio" name="imageSelect" id="1" />
-                    <input type="radio" name="imageSelect" id="2" />
-                    <input type="radio" name="imageSelect" id="3" />
-                    <input type="radio" name="imageSelect" id="4" />
+                    {
+                        carouselArray.map((_, index) => (
+                            <input 
+                                key={index}
+                                type='radio'
+                                name='imageSelect'
+                                value={index}
+                                onChange={updateCarousel}
+                            />
+                        ))
+                    }
                 </div>
             </section>
 
