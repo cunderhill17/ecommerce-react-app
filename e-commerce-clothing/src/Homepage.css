@@ -67,6 +67,8 @@
 
 }
 
+
+
 .bannerImageCon.grid-con {
     margin-top: 25px;
     margin-bottom: 25px;
@@ -88,7 +90,21 @@
 }
 
 
-.carousel.grid-con {
+.imageGrid.grid-con {
+    display: none;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    .imageGridImg {
+        width: 100%;
+        max-width: 100%;
+        height: 364px;
+        background-color: #8B8989;
+    }
+}
+
+.carousel {
+    position: relative;
     margin-top: 25px;
     margin-bottom: 25px;
 
@@ -97,9 +113,28 @@
         max-width: 100%;
         height: 364px;
         background-color: #8B8989;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carouselBtns {
+        position: absolute;
+        bottom: 50px;
+        left: 37%;
+
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #913f26;
+            cursor: pointer; 
+        }
     }
 }
-
 
 @media screen and (min-width: 768px) {
     .hero-section.grid-con {
@@ -110,9 +145,14 @@
 
     }
 
-    .carousel.grid-con {
+    .carousel {
+        display: none;
+    }
 
-        .carouselImg {
+    .imageGrid.grid-con {
+        display: grid;
+
+        .imageGridImg {
             height: 180px;
         }
     }
@@ -129,9 +169,10 @@
         }
     }
 
-    .carousel.grid-con {
+    .imageGrid.grid-con {
+        display: grid;
 
-        .carouselImg {
+        .imageGridImg {
             height: 289px;
         }
     }

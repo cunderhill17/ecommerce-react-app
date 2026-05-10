@@ -43,11 +43,23 @@ export default function Homepage() {
             </section>
 
             <section className="carousel grid-con">
-                <div className="carouselImg col-span-full md:col-span-2 lg:col-span-3"></div>
-                <div className="carouselImg col-span-full md:col-span-2 lg:col-span-3"></div>
-                <div className="carouselImg col-span-full md:col-span-2 lg:col-span-3"></div>
-                <div className="carouselImg col-span-full md:col-span-2 lg:col-span-3"></div>
+                <div className="carouselImg col-span-full md:col-span-2 lg:col-span-3">Image 1</div>
+
+                <div className='carouselBtns'>
+                    <input type="radio" name="imageSelect" id="1" />
+                    <input type="radio" name="imageSelect" id="2" />
+                    <input type="radio" name="imageSelect" id="3" />
+                    <input type="radio" name="imageSelect" id="4" />
+                </div>
             </section>
+
+            <section className="imageGrid grid-con">
+                <div className="imageGridImg col-span-full md:col-span-2 lg:col-span-3"></div>
+                <div className="imageGridImg col-span-full md:col-span-2 lg:col-span-3"></div>
+                <div className="imageGridImg col-span-full md:col-span-2 lg:col-span-3"></div>
+                <div className="imageGridImg col-span-full md:col-span-2 lg:col-span-3"></div>
+            </section>
+
 
             <Newsletter />
         </main>
