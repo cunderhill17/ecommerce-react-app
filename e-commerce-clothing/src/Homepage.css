@@ -1,6 +1,97 @@
+.hero-section.grid-con {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: #D9D9D9;
+
+    .hero-section-cta {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        p {
+            font-size: 12px;
+        }
+
+        h2 {
+            font-size: 45px;
+        }
+
+        button {
+            width: 142px;
+            height: 32px;
+            border: none;
+            border-radius: 15px;
+            background-color: #6B6B6B;
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+    }
+
+    .verticalImages {
+        position: relative;
+        padding-left: 20px;
+        display: none;
+        grid-row: span 2;
+
+        .image1 {
+            width: 223px;
+            height: 425px;
+            border-radius: 15px;
+            background-color: #767676;
+            margin-bottom: 45px;
+        }
+
+        .image2 {
+            position: absolute;
+            bottom: 5px;
+            left: 125px;
+
+            width: 195px;
+            height: 209px;
+            border: 1px solid #FFFFFF;
+            border-radius: 15px;
+            background-color: #767676;
+        }
+    }
+
+    .horizontalImages {
+        div {
+            width: 358px;
+            height: 121px;
+            border-radius: 15px;
+            background-color: #635F5F;
+            margin-top: 30px;
+        }
+    }
+
+}
+
+
 .bestSellerCon {
     display: flex;
     padding: 0px 20px;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+@media screen and (min-width: 768px) {
+    .hero-section.grid-con {
+
+        .verticalImages {
+            display: block;
+        }
+
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-section.grid-con {
+        .horizontalImages {
+            div {
+                width: 636px;
+                height: 200px;
+            }
+        }
+    }
 }
