@@ -13,6 +13,24 @@ export default function Homepage() {
     return (
         <main>
 
+            <section className="hero-section grid-con">
+                <div className='hero-section-cta col-span-3 md:col-span-4 lg:col-span-7'>
+                    <p>Small Text</p>
+                    <h2>Larger Heading</h2>
+                    <p>Details for the heading</p>
+                    <button>Start Shopping</button>
+                </div>
+
+                <div className='verticalImages md:col-span-4 lg:col-span-5'>
+                    <div className='image1'></div>
+                    <div className='image2'></div>
+                </div>
+
+                <div className='horizontalImages col-span-full md:col-span-4 lg:col-span-7'>
+                    <div></div>
+                </div>
+            </section>
+
             <section className="grid-con">
                 <h2 className="col-span-full">Best Sellers</h2>
                 <div className="bestSellerCon col-span-full">
