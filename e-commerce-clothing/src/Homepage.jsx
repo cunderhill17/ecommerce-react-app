@@ -38,6 +38,17 @@ export default function Homepage() {
                 </div>
             </section>
 
+            <section className="bannerImageCon grid-con">
+                <div className='bannerImage col-span-full'></div>
+            </section>
+
+            <section className="carousel grid-con">
+                <div className="carouselImg col-span-full md:col-span-2 lg:col-span-3"></div>
+                <div className="carouselImg col-span-full md:col-span-2 lg:col-span-3"></div>
+                <div className="carouselImg col-span-full md:col-span-2 lg:col-span-3"></div>
+                <div className="carouselImg col-span-full md:col-span-2 lg:col-span-3"></div>
+            </section>
+
             <Newsletter />
         </main>
     )
