@@ -106,7 +106,7 @@ function Filter({setCategory, setMaxPrice, setColour}) {
 }
 
 
-function ProductList({products, cartItems, setCartItems}) {
+export function ProductList({products, cartItems, setCartItems}) {
     function addToCart(p) {
 
         const existingItem = cartItems.find(item => item.id === p.id);
