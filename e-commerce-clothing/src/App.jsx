@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import './App.css'
+import productsData from './data/products.json'
 
 import Header from './header'
 import Footer from './Footer'
@@ -11,6 +12,8 @@ import ShoppingCart from './ShoppingCart'
 
 
 function AppLayout() {
+    const originalProducts = productsData;
+
     const [cartItems, setCartItems] = useState([]);
     const [usedPromo, setUsedPromo] = useState({
         "used": false,
@@ -25,7 +28,7 @@ function AppLayout() {
     return (
         <>
             <Header cartItems={cartItems}/>         
-            <Outlet context={{ cartItems, setCartItems, usedPromo, setUsedPromo }}/>
+            <Outlet context={{ cartItems, setCartItems, usedPromo, setUsedPromo, originalProducts }}/>
             <Footer />         
         </>
     )
