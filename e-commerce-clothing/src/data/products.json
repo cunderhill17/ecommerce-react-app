@@ -7,6 +7,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "tshirt",
+        "bestSeller": false,
         "colours": ["beige"]
     },
 
@@ -18,6 +19,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "tshirt",
+        "bestSeller": false,
         "colours": ["red", "navy", "beige"]
     },
 
@@ -29,6 +31,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "tshirt",
+        "bestSeller": false,
         "colours": ["red", "navy"]
     },
 
@@ -40,6 +43,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "blouse",
+        "bestSeller": false,
         "colours": ["red"]
     },
 
@@ -51,6 +55,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "blouse",
+        "bestSeller": false,
         "colours": ["navy"]
     },
 
@@ -62,6 +67,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "blouse",
+        "bestSeller": true,
         "colours": ["red", "navy", "beige"]
     },
 
@@ -73,6 +79,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "tanktop",
+        "bestSeller": false,
         "colours": ["beige"]
     },
 
@@ -84,6 +91,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "tanktop",
+        "bestSeller": false,
         "colours": ["red"]
     },
 
@@ -95,6 +103,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "tanktop",
+        "bestSeller": false,
         "colours": ["navy"]
     },
 
@@ -106,6 +115,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "jeans",
+        "bestSeller": false,
         "colours": ["red", "navy", "beige"]
     },
 
@@ -117,6 +127,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "jeans",
+        "bestSeller": true,
         "colours": ["red", "beige"]
     },
 
@@ -128,6 +139,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "slacks",
+        "bestSeller": true,
         "colours": ["red", "navy"]
     },
 
@@ -139,6 +151,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "trousers",
+        "bestSeller": false,
         "colours": ["beige", "navy"]
     },
 
@@ -150,6 +163,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "trousers",
+        "bestSeller": false,
         "colours": ["beige"]
     },
 
@@ -161,6 +175,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "cardigan",
+        "bestSeller": true,
         "colours": ["navy"]
     },
 
@@ -172,6 +187,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "cardigan",
+        "bestSeller": false,
         "colours": ["red"]
     }
 ]
