@@ -1,11 +1,12 @@
 .newsletterBckg {
-    background-color: #B3B1B1;
+    background-color: #998748;
     padding: 25px;
 
     h2 {
         display: flex;
         align-items: center;
         margin-bottom: 15px;
+        color: #332904;
     }
 
     .newsletterInputCon {
@@ -16,10 +17,15 @@
         input {
             width: 270px;
             height: 60px;
-            border: 1px solid rgb(63, 63, 63);
+            border: 1px solid #CCBD89;
             border-radius: 10px;
             padding: 10px;
-            background-color: #D9D9D9;
+            background-color: #332904;
+            color: #CCBD89;
+        }
+
+        input::placeholder {
+            color: #CCBD89;
         }
 
         button {
@@ -27,7 +33,8 @@
             height: 40px;
             border: none;
             border-radius: 10px;
-            background-color: #D9D9D9;
+            background-color: #332904;
+            color: #CCBD89;
             cursor: pointer;
         }
     }
@@ -43,7 +50,7 @@
         .newsletterInputCon {
             flex-direction: row;
             align-items: center;
-            background-color: #D9D9D9;
+            background-color: #332904;
             border-radius: 10px;
             padding: 10px;
             gap: 5px;
@@ -53,7 +60,7 @@
                 height: 40px;
                 border: none;
                 border-radius: 0px;
-                border-right: 1px solid rgb(44, 44, 44);
+                border-right: 1px solid #CCBD89;
             }
         }
     }

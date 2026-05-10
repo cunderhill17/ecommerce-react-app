@@ -44,7 +44,8 @@
     .addCartBtn {
         width: 142px;
         height: 35px;
-        background-color: #D9D9D9;
+        background-color: #332904;
+        color: #CCBD89;
         border: none;
         border-radius: 10px;
         cursor: pointer;
@@ -53,7 +54,7 @@
 
 .tabFilter {
     display: none;
-    background-color: #D9D9D9;
+    background-color: #CCBD89;
     padding: 10px;
 }
 
@@ -61,7 +62,8 @@ details {
     margin-bottom: 15px;
 
     summary {
-        background-color: #A19797;
+        background-color: #332904;
+        color: #CCBD89;
         border-radius: 5px;
         padding: 5px 10px;
         font-size: 22px;

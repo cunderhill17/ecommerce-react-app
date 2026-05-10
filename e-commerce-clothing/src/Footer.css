@@ -1,6 +1,6 @@
 footer {
-    background-color: #D9D9D9;
-    color: #4B4B4B;
+    background-color: #CCBD89;
+    color: #332904;
     padding: 10px;
 }
 
@@ -31,7 +31,7 @@ footer.grid-con {
 
             a {
                 text-decoration: none;
-                color: #4B4B4B;
+                color: #332904;
             }
         }
     }
