@@ -11,6 +11,7 @@
 
     h2 {
         margin-bottom: 25px;
+        color: #332904;
     }
 
     form {
@@ -29,6 +30,7 @@
 
         label {
             margin-bottom: 5px;
+            color: #332904;
         }
 
         .inputHalf {
@@ -48,7 +50,9 @@
         }
 
         .inputHalf, .inputFull, .textareaFull {
-            border: 1px solid black;
+            border: 1px solid #332904;
+            background-color: transparent;
+            color: #332904;
             border-radius: 5px;
             margin-bottom: 15px;
             padding: 5px;
@@ -61,6 +65,8 @@
             border-radius: 5px;
             cursor: pointer;
             margin-top: 15px;
+            background-color: #332904;
+            color: #CCBD89;
         }
     }
 }
@@ -71,7 +77,7 @@
     height: 522px;
     border-radius: 25px;
     padding: 25px;
-    background-color: #D9D9D9;
+    background-color: #998748;
     margin: 0px auto;
 
     .contactMap {
@@ -93,6 +99,10 @@
 
     .socialMediaCon {
         margin: 40px 0px 25px 0px;
+
+        h2 {
+            color: #332904;
+        }
 
         .iconCon {
             display: flex;

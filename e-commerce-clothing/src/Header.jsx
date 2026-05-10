@@ -35,7 +35,7 @@ export default function Header({cartItems}) {
                     </ul>
                 </nav>
 
-                <div className='searchBar col-span-3 md:col-start-6 md:col-end-9 lg:col-start-10 lg:col-end-13'>
+                <div className='searchBar col-span-3 md:col-start-6 md:col-end-9 lg:col-start-7 lg:col-end-13'>
                     <img className='searchIcon' src={search} alt="Search Icon" />
                     <input type="search" name="productSearch" id="productSearch" placeholder='Search...' />
                     <NavLink to="/shoppingcart">

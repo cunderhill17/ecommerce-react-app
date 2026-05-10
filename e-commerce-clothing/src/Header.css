@@ -2,12 +2,16 @@ header.grid-con {
     margin-bottom: 25px;
 }
 
+h1 {
+    color: #332904;
+}
+
 .menuIcon {
     width: 45px;
 }
 
 .navMenu {
-    background-color: #D9D9D9;
+    background-color: #CCBD89;
     padding: 35px 15px 35px 25px;
 }
 
@@ -30,7 +34,7 @@ header.grid-con {
         li {
             a {
                 text-decoration: none;
-                color: #4B4B4B;
+                color: #332904;
                  
                 &:hover {
                     color: #FFFFFF;
@@ -43,7 +47,7 @@ header.grid-con {
 .searchBar {
     width: 240px;
     padding: 10px;
-    background-color: #898989;
+    background-color: #332904;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -62,8 +66,13 @@ header.grid-con {
         height: 25px;
         border: none;
         background-color: transparent;
-        color: #ffffff;
-        border-right: 1px solid #FFFFFF;
+        color: #CCBD89;
+        border-right: 1px solid #CCBD89;
+        padding-left: 5px;
+    }
+
+    input::placeholder {
+        color: #CCBD89;
     }
 
     a {
@@ -72,6 +81,10 @@ header.grid-con {
         flex-direction: column;
         align-items: center;
         color: #ffffff;
+
+        p {
+            color: #CCBD89;
+        }
     }
 
 }
@@ -83,6 +96,16 @@ header.grid-con {
 
     .navLinks {
         display: flex;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .searchBar {
+        width: 500px;
+
+        input {
+            width: 300px;
+        }
     }
 }
 
