@@ -53,6 +53,14 @@ function Filter({setCategory, setMaxPrice, setColour}) {
                     <label>
                         <input type="radio" name="category" value="cardigan" onChange={(event) => updateFilters(setCategory, event)}/> Cardigan
                     </label>
+
+                    <label>
+                        <input type="radio" name="category" value="jacket" onChange={(event) => updateFilters(setCategory, event)}/> Jackets
+                    </label>
+
+                    <label>
+                        <input type="radio" name="category" value="dressshirt" onChange={(event) => updateFilters(setCategory, event)}/> Dress Shirts
+                    </label>
                 </div>
             </details>
 

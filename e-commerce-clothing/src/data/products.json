@@ -7,6 +7,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "tshirt",
+        "url": "/images/products/tshirt-1.jpg",
         "bestSeller": false,
         "colours": ["beige"]
     },
@@ -19,6 +20,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "tshirt",
+        "url": "/images/products/tshirt-2.jpg",
         "bestSeller": false,
         "colours": ["red", "navy", "beige"]
     },
@@ -31,6 +33,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "tshirt",
+        "url": "/images/products/tshirt-3.jpg",
         "bestSeller": false,
         "colours": ["red", "navy"]
     },
@@ -43,6 +46,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "blouse",
+        "url": "/images/products/blouse-1.jpg",
         "bestSeller": false,
         "colours": ["red"]
     },
@@ -55,18 +59,20 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "blouse",
+        "url": "/images/products/blouse-2.jpg",
         "bestSeller": false,
         "colours": ["navy"]
     },
 
     {
         "id": 6,
-        "name": "Maribel Floral Breeze Blouse",
-        "description": "A loose-fitting blouse with an all-over floral print and airy fabric. The slightly puffed sleeves add a gentle, romantic style.",
+        "name": "Frostline Harbor Knit",
+        "description": "A heavyweight crewneck sweater with a soft wool blend, textured knit finish, and timeless cold-weather style.",
         "price": 50.99,
         "stock": 5,
         "purchaseQuantity": 1,
-        "category": "blouse",
+        "category": "cardigan",
+        "url": "/images/products/sweater-3",
         "bestSeller": true,
         "colours": ["red", "navy", "beige"]
     },
@@ -79,30 +85,33 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "tanktop",
+        "url": "/images/products/tanktop-1.jpg",
         "bestSeller": false,
         "colours": ["beige"]
     },
 
     {
         "id": 8,
-        "name": "Zephyra Airflow Tank",
-        "description": "A breathable tank top featuring micro-vented fabric for enhanced airflow. Designed for warm climates or active days.",
+        "name": "Alder & Ash Tailored Oxford",
+        "description": "A modern men’s dress shirt with a tailored fit, crisp cotton fabric, and versatile style for work or formal occasions.",
         "price": 50.99,
         "stock": 5,
         "purchaseQuantity": 1,
-        "category": "tanktop",
+        "category": "dressshirt",
+        "url": "/images/products/dressshirt-1.jpg",
         "bestSeller": false,
         "colours": ["red"]
     },
 
     {
         "id": 9,
-        "name": "Cove Linen Tank Top",
-        "description": "A relaxed-fit tank made from lightweight linen. Its natural texture and loose cut give it a laid-back, coastal feel.",
+        "name": "Northmere Cropped Wool Jacket",
+        "description": "A waist-length women’s wool jacket with a structured fit, soft brushed texture, and refined everyday style for cooler seasons.",
         "price": 50.99,
         "stock": 5,
         "purchaseQuantity": 1,
-        "category": "tanktop",
+        "category": "jacket",
+        "url": "/images/products/jacket-3.jpg",
         "bestSeller": false,
         "colours": ["navy"]
     },
@@ -115,18 +124,20 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "jeans",
+        "url": "/images/products/pants-3.jpg",
         "bestSeller": false,
         "colours": ["red", "navy", "beige"]
     },
 
     {
         "id": 11,
-        "name": "Highcrest Sculpt Skinny Jeans",
-        "description": "Slim-fit jeans with stretch-enhanced fabric that adapts to movement. They provide a sleek, close-to-body fit without restricting comfort.",
+        "name": "Camden Row Classic Trench",
+        "description": "A women’s tan trench coat with a tailored silhouette, lightweight water-resistant fabric, and timeless city-ready style.",
         "price": 50.99,
         "stock": 5,
         "purchaseQuantity": 1,
-        "category": "jeans",
+        "category": "jacket",
+        "url": "/images/products/jacket-2.jpg",
         "bestSeller": true,
         "colours": ["red", "beige"]
     },
@@ -139,6 +150,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "slacks",
+        "url": "/images/products/pants-1.jpg",
         "bestSeller": true,
         "colours": ["red", "navy"]
     },
@@ -151,18 +163,20 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "trousers",
+        "url": "/images/products/pants-2.jpg",
         "bestSeller": false,
         "colours": ["beige", "navy"]
     },
 
     {
         "id": 14,
-        "name": "Brookfield Relaxed Fit Trousers",
-        "description": "Casual trousers with a slightly loose cut and soft fabric. Designed for comfort while maintaining a clean, structured look.",
+        "name": "Solstice Cropped Jacket",
+        "description": "A cropped jacket with a bold modern fit, lightweight feel, and standout everyday style.",
         "price": 50.99,
         "stock": 5,
         "purchaseQuantity": 1,
-        "category": "trousers",
+        "category": "jacket",
+        "url": "/images/products/jacket-1.jpg",
         "bestSeller": false,
         "colours": ["beige"]
     },
@@ -175,6 +189,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "cardigan",
+        "url": "/images/products/sweater-1.jpg",
         "bestSeller": true,
         "colours": ["navy"]
     },
@@ -187,6 +202,7 @@
         "stock": 5,
         "purchaseQuantity": 1,
         "category": "cardigan",
+        "url": "/images/products/sweater-2.jpg",
         "bestSeller": false,
         "colours": ["red"]
     }
