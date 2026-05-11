@@ -26,14 +26,17 @@
             color: #332904;
         }
 
-        button {
+        a {
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 142px;
             height: 32px;
             border: none;
             border-radius: 15px;
             background-color: #332904;
             color: #CCBD89;
-            cursor: pointer;
         }
     }
 
