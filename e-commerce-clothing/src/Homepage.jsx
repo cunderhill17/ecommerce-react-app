@@ -7,7 +7,12 @@ import './global/grid.css'
 import './Homepage.css'
 
 export default function Homepage() {
-    let carouselArray = ['Image One', 'Image Two', 'Image Three', 'Image Four'];
+    let carouselArray = [
+        '/images/carousel/carousel-1.jpg', 
+        '/images/carousel/carousel-2.jpg', 
+        '/images/carousel/carousel-3.jpg', 
+        '/images/carousel/carousel-4.jpg'
+    ];
 
     const [currentCarouselImg, setCurrentCarouselImg] = useState(carouselArray[0]);
     const { cartItems, setCartItems, originalProducts } = useOutletContext();
@@ -54,7 +59,7 @@ export default function Homepage() {
             </section>
 
             <section className="carousel grid-con">
-                <div className="carouselImg col-span-full md:col-span-2 lg:col-span-3">{currentCarouselImg}</div>
+                <img className='carouselImg col-span-full md:col-span-2 lg:col-span-3' src={currentCarouselImg} alt="Placeholder" />
 
                 <div className='carouselBtns'>
                     {
@@ -72,10 +77,11 @@ export default function Homepage() {
             </section>
 
             <section className="imageGrid grid-con">
-                <div className="imageGridImg col-span-full md:col-span-2 lg:col-span-3"></div>
-                <div className="imageGridImg col-span-full md:col-span-2 lg:col-span-3"></div>
-                <div className="imageGridImg col-span-full md:col-span-2 lg:col-span-3"></div>
-                <div className="imageGridImg col-span-full md:col-span-2 lg:col-span-3"></div>
+                {
+                    carouselArray.map((img, index) => (
+                        <img key={index} className='imageGridImg col-span-full md:col-span-2 lg:col-span-3' src={img} alt='Placeholder'/>
+                    ))
+                }
             </section>
 
 
