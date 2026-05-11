@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 import './global/grid.css'
 import './Header.css'
@@ -7,14 +8,11 @@ import menuIcon from './assets/menu-icon.svg'
 import search from './assets/search-icon.svg'
 
 export default function Header({cartItems}) {
-    
+    const [isOpen, setIsOpen] = useState(false);
+
     let totalQuantity = cartItems.reduce(
         (total, item) => total + Number(item.purchaseQuantity), 0
     )
-
-    function toggleNavMenu() {
-        
-    }
 
     return (
         <header className='grid-con'>
@@ -22,10 +20,17 @@ export default function Header({cartItems}) {
 
             <section className='navMenu col-span-full grid-con'>
                 <div className='hamburgerMenu col-span-1'>
-                    <img className='menuIcon' src={menuIcon} alt="Hamburger Menu Icon" />
+                    <img 
+                        className='menuIcon' 
+                        src={menuIcon} 
+                        onClick={() => setIsOpen(prev => !prev)} 
+                        alt="Hamburger Menu Icon" 
+                    />
                 </div>
 
-                <nav className='navLinks md:col-span-3 lg:col-span-5'>
+                <nav 
+                    className={isOpen ? 'navLinks openMenu md:col-span-3 lg:col-span-5' : 'navLinks md:col-span-3 lg:col-span-5'}
+                >
                     <ul>
                         <li>
                             <NavLink to="/products">Products</NavLink>
