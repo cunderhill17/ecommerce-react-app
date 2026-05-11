@@ -50,7 +50,8 @@ export default function Contact() {
 
                 <div className="col-span-full md:col-span-4 lg:col-span-6">
                     <div className='mapContainer'>
-                        <div className='contactMap'></div>
+                        <img className='contactMap' src="/images/contact/map.jpg" alt="Map of the area surrounding London Ontario" />
+                        {/* <div className='contactMap'></div> */}
 
                         <div className='contactDetails'>
                             <img className='contactIcon' src={telephone} alt="Telephone Icon" />
