@@ -74,7 +74,7 @@
 
 .mapContainer {
     width: 376px;
-    height: 522px;
+    height: fit-content;
     border-radius: 25px;
     padding: 25px;
     background-color: #998748;
@@ -82,7 +82,6 @@
 
     .contactMap {
         width: 325px;
-        height: 207px;
         background-color: #888888;
         border-radius: 15px;
     }
@@ -118,7 +117,6 @@
         
         .contactMap {
             width: 534px;
-            height: 250px;
         }
     }
 }
