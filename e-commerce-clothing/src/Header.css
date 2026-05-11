@@ -8,6 +8,7 @@ h1 {
 
 .menuIcon {
     width: 45px;
+    cursor: pointer;
 }
 
 .navMenu {
@@ -52,6 +53,10 @@ h1 {
             }
         }
     }
+}
+
+.navLinks.openMenu {
+    display: flex;
 }
 
 .searchBar {
