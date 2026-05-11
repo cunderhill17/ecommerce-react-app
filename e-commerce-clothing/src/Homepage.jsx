@@ -1,4 +1,4 @@
-import { useOutletContext } from 'react-router-dom'
+import { useOutletContext, NavLink } from 'react-router-dom'
 import { useState } from 'react';
 
 import Newsletter from "./Newsletter"
@@ -34,7 +34,7 @@ export default function Homepage() {
                     <p>Crafted for Everyday Icons</p>
                     <h2>WEAR CONFIDENCE</h2>
                     <p>Timeless essentials designed with precision, comfort, and modern elegance.</p>
-                    <button>Start Shopping</button>
+                    <NavLink to='/products'>Start Shopping</NavLink>
                 </div>
             </section>
 
