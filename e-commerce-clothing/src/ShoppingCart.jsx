@@ -9,7 +9,7 @@ function CartItem({item, removeFromCart, increaseQuantity, decreaseQuantity}) {
     return (
         <div className='cartItem'>
             <div className='cartImage'>
-                <div className='itemImage'></div>
+                <img className='itemImage' src={item.url} alt={item.description} />
                 <button onClick={() => removeFromCart(item)}>Remove From Cart</button>
             </div>
 
