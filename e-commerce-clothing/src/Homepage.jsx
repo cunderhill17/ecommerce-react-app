@@ -50,7 +50,7 @@ export default function Homepage() {
             </section>
 
             <section className="bannerImageCon grid-con">
-                <div className='bannerImage col-span-full'></div>
+                <img className='bannerImage col-span-full' src="/images/banners/banner-1.jpg" alt="Fashion throughout the seasons" />
             </section>
 
             <section className="carousel grid-con">
