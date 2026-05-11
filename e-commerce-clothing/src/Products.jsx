@@ -3,7 +3,6 @@ import { useOutletContext } from 'react-router-dom'
 
 import './global/grid.css'
 import './Products.css'
-// import productsData from './data/products.json'
 import filter from './assets/filter-icon.svg'
 
 
@@ -147,7 +146,7 @@ function ProductCard({p, addToCart}) {
 
     return (    
         <div className='productCard'>
-            <div className='productImg'></div>
+            <img className='productImg' src={p.url} alt={p.description} />
             <div className='productDetails'>
                 <p>{p.name}</p>
                 <p>{p.price}</p>
@@ -164,7 +163,6 @@ function ProductCard({p, addToCart}) {
 
 
 export default function Products() {
-    // const originalProducts = productsData;
     const { cartItems, setCartItems, originalProducts } = useOutletContext();
 
     const [filteredProducts, setFilteredProducts] = useState(originalProducts);
