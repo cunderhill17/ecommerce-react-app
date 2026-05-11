@@ -171,6 +171,8 @@ export default function Products() {
     const [maxPrice, setMaxPrice] = useState('');
     const [colour, setColour] = useState('');
 
+    const [isOpen, setIsOpen] = useState(false);
+
     useEffect(() => {
         let newFiltered = originalProducts;
 
@@ -192,13 +194,15 @@ export default function Products() {
 
     return (
         <main>
-            <section className='grid-con'>
+            <section className='productGrid grid-con'>
 
                 <div className='mobFilter col-span-full'>
-                    <img className='filterIcon' src={filter} alt="Filter Icon" />
+                    <img className='filterIcon' src={filter} alt="Filter Icon" onClick={() => setIsOpen(prev => !prev)}/>
                 </div>
 
-                <div className='tabFilter md:col-span-2 lg:col-span-3'>
+                <div 
+                    className={isOpen ? 'tabFilter openFilter md:col-span-2 lg:col-span-3' : 'tabFilter md:col-span-2 lg:col-span-3'}
+                >
                     <Filter setCategory={setCategory} setMaxPrice={setMaxPrice} setColour={setColour} />
                 </div>
 

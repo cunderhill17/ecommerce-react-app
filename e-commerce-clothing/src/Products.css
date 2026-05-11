@@ -1,5 +1,10 @@
+.productGrid {
+    position: relative;
+}
+
 .filterIcon {
     width: 38px;
+    cursor: pointer;
 }
 
 .productCon {
@@ -54,7 +59,15 @@
 .tabFilter {
     display: none;
     background-color: #CCBD89;
-    padding: 10px;
+
+    position: absolute;
+    top: 30px;
+    width: 412px;
+    padding: 25px 10px;
+}
+
+.tabFilter.openFilter {
+    display: block;
 }
 
 details {
@@ -85,6 +98,9 @@ details {
 
     .tabFilter {
         display: block;
+        position: static;
+        width: auto;
+        padding: 10px;
     }
 
     .productCon {
