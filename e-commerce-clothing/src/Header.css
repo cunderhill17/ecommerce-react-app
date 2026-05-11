@@ -1,10 +1,16 @@
 header.grid-con {
     margin-bottom: 25px;
+
+    a {
+        text-decoration: none;
+
+        h1 {
+            color: #332904;
+        }
+    }
 }
 
-h1 {
-    color: #332904;
-}
+
 
 .menuIcon {
     width: 45px;

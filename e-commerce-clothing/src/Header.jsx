@@ -16,8 +16,10 @@ export default function Header({cartItems}) {
 
     return (
         <header className='grid-con'>
-            <h1 className='col-span-full'>Name of Clothing Brand</h1>
-
+            <NavLink to="/" className="col-span-full">
+                <h1>Novaire & Co.</h1>
+            </NavLink>
+            
             <section className='navMenu col-span-full grid-con'>
                 <div className='hamburgerMenu col-span-1'>
                     <img 
@@ -39,7 +41,7 @@ export default function Header({cartItems}) {
                             <NavLink to="/contact">Contact</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/">About</NavLink>
+                            <NavLink>About</NavLink>
                         </li>
                     </ul>
                 </nav>
