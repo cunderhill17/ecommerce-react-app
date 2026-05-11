@@ -8,6 +8,14 @@ footer.grid-con {
     margin-top: 25px;
 }
 
+.footerLogo {
+    text-decoration: none;
+
+    h2 {
+        color: #332904;
+    }
+}
+
 .footerLogo, .footerAddress p, .footerNumber, .copyright, .footerPrivacy p, .footerTerms p {
     text-align: center;
 }

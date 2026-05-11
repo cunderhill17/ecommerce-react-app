@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 import './global/grid.css'
 import './Footer.css'
 
@@ -6,7 +8,10 @@ export default function Footer() {
         <footer className='grid-con'>
 
             <section className='col-span-full md:col-span-4'>
-                <h2 className="footerLogo">Name of Clothing Brand</h2>
+                <NavLink to="/" className="footerLogo">
+                    <h2>Novaire & Co.</h2>
+                </NavLink>
+                
                 
                 <div className='footerAddress'>
                     <p>76 Willow Drive</p>
@@ -22,9 +27,9 @@ export default function Footer() {
             <section className='footerQuickLinks col-span-2'>
                 <h2>Quick Links</h2>
                 <ul>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><NavLink to='/products'>Products</NavLink></li>
+                    <li><NavLink to='/contact'>Contact</NavLink></li>
+                    <li><NavLink>About</NavLink></li>
                 </ul>
             </section>
 
