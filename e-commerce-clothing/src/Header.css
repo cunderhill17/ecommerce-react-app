@@ -33,6 +33,7 @@ header.grid-con {
     display: none;
     position: absolute;
     top: 140px;
+    z-index: 1000;
     align-items: center;
     justify-content: center;
 
